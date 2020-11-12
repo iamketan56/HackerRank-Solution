@@ -1,0 +1,36 @@
+
+
+// Complete the getNode function below.
+
+/*
+ * For your reference:
+ *
+ * SinglyLinkedListNode {
+ *     int data;
+ *     SinglyLinkedListNode* next;
+ * };
+ *
+ */
+int getNode(SinglyLinkedListNode* head, int position) {
+ SinglyLinkedListNode *h;
+h=head;
+    int count=0;
+    while(head!=NULL)
+    {
+        count++;
+        head=head->next;
+    }
+    //cout<<count;
+    int t=0;
+    while(h!=NULL)
+    {
+          if(t==count-position-1)
+           {
+           break;
+            }
+            h=h->next;
+            t++;
+          }
+          return h->data;
+}
+
