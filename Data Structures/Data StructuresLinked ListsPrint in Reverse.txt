@@ -1,0 +1,30 @@
+
+
+// Complete the reversePrint function below.
+
+/*
+ * For your reference:
+ *
+ * SinglyLinkedListNode {
+ *     int data;
+ *     SinglyLinkedListNode* next;
+ * };
+ *
+ */
+void reversePrint(SinglyLinkedListNode* head) {
+     SinglyLinkedListNode *temp = NULL;
+     SinglyLinkedListNode *n = NULL;
+    while(head!=NULL)
+    {
+    temp = head->next;
+    head->next = n;
+    n = head;
+    head = temp;
+    }
+    while(n!=NULL)
+    {
+        cout<<n->data<<endl;
+        n=n->next;
+    }
+}
+
