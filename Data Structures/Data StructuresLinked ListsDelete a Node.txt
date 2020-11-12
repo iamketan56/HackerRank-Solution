@@ -1,0 +1,35 @@
+
+
+// Complete the deleteNode function below.
+
+/*
+ * For your reference:
+ *
+ * SinglyLinkedListNode {
+ *     int data;
+ *     SinglyLinkedListNode* next;
+ * };
+ *
+ */
+SinglyLinkedListNode* deleteNode(SinglyLinkedListNode* head, int position) {
+    int count=0;
+    SinglyLinkedListNode *temp,*h;
+    temp=head;
+while(temp->next!=NULL)
+{
+    if(position==0)
+    {
+        return temp->next;
+    }
+    if(count==position-1)
+    {
+        h=temp;
+        h->next=temp->next->next;
+        //free(temp);
+    }
+    temp=temp->next;
+    count++;
+}
+return  head;
+}
+
