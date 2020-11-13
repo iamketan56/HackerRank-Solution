@@ -1,0 +1,34 @@
+
+
+// Complete the has_cycle function below.
+
+/*
+ * For your reference:
+ *
+ * SinglyLinkedListNode {
+ *     int data;
+ *     SinglyLinkedListNode* next;
+ * };
+ *
+ */
+bool has_cycle(SinglyLinkedListNode* head) {
+SinglyLinkedListNode *p;
+SinglyLinkedListNode*q;
+p=head;
+q=head;
+do
+{
+p=p->next;
+q=q->next;
+if(q)
+{
+    q=q->next;
+}
+}while((p!=q) && (p!=NULL && q!=NULL));
+if(p==q)
+    return true;
+else
+    return false;
+
+}
+
