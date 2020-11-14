@@ -1,0 +1,14 @@
+
+    int a;
+double b;
+string e="HackerRank ";
+string r;
+cin>>a;
+cin>>b;
+getline(cin>>ws,r);
+int f=a+4;
+cout<<f<<endl;
+double c=b+4;
+cout<<fixed<<setprecision(1)<<c<<endl;
+e=e+r;
+cout<<e<<endl;
